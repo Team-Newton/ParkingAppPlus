@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B5949EC237E230600EBC78B /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5949EB237E230600EBC78B /* SignupVC.swift */; };
+		3B5949EE237E239B00EBC78B /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5949ED237E239B00EBC78B /* LoginVC.swift */; };
+		3B5949F0237E2D8300EBC78B /* SignUpNavigationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5949EF237E2D8300EBC78B /* SignUpNavigationVC.swift */; };
+		3B5949F2237E378100EBC78B /* SignInNavigationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5949F1237E378100EBC78B /* SignInNavigationVC.swift */; };
+		3B5949F4237E37C800EBC78B /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5949F3237E37C800EBC78B /* SignInVC.swift */; };
 		3B75B417237CA7C60053DCD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B75B416237CA7C60053DCD2 /* AppDelegate.swift */; };
 		3B75B419237CA7C60053DCD2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B75B418237CA7C60053DCD2 /* SceneDelegate.swift */; };
 		3B75B41B237CA7C60053DCD2 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B75B41A237CA7C60053DCD2 /* FirstViewController.swift */; };
@@ -18,6 +23,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B5949EB237E230600EBC78B /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
+		3B5949ED237E239B00EBC78B /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		3B5949EF237E2D8300EBC78B /* SignUpNavigationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpNavigationVC.swift; sourceTree = "<group>"; };
+		3B5949F1237E378100EBC78B /* SignInNavigationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInNavigationVC.swift; sourceTree = "<group>"; };
+		3B5949F3237E37C800EBC78B /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		3B75B413237CA7C60053DCD2 /* ParkingApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParkingApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B75B416237CA7C60053DCD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B75B418237CA7C60053DCD2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +79,11 @@
 				3B75B426237CA7C80053DCD2 /* LaunchScreen.storyboard */,
 				3B75B429237CA7C80053DCD2 /* Info.plist */,
 				3B75B421237CA7C60053DCD2 /* ParkingApplication.xcdatamodeld */,
+				3B5949EB237E230600EBC78B /* SignupVC.swift */,
+				3B5949ED237E239B00EBC78B /* LoginVC.swift */,
+				3B5949EF237E2D8300EBC78B /* SignUpNavigationVC.swift */,
+				3B5949F1237E378100EBC78B /* SignInNavigationVC.swift */,
+				3B5949F3237E37C800EBC78B /* SignInVC.swift */,
 			);
 			path = ParkingApplication;
 			sourceTree = "<group>";
@@ -144,11 +159,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B5949EC237E230600EBC78B /* SignupVC.swift in Sources */,
 				3B75B41D237CA7C60053DCD2 /* SecondViewController.swift in Sources */,
+				3B5949EE237E239B00EBC78B /* LoginVC.swift in Sources */,
+				3B5949F2237E378100EBC78B /* SignInNavigationVC.swift in Sources */,
+				3B5949F4237E37C800EBC78B /* SignInVC.swift in Sources */,
 				3B75B41B237CA7C60053DCD2 /* FirstViewController.swift in Sources */,
 				3B75B417237CA7C60053DCD2 /* AppDelegate.swift in Sources */,
 				3B75B423237CA7C60053DCD2 /* ParkingApplication.xcdatamodeld in Sources */,
 				3B75B419237CA7C60053DCD2 /* SceneDelegate.swift in Sources */,
+				3B5949F0237E2D8300EBC78B /* SignUpNavigationVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
