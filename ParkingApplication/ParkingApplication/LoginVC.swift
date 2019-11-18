@@ -25,8 +25,11 @@ class LoginVC: UIViewController {
     
     @IBAction func onSignInClick(_ sender: UIButton) {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let signInNavigationVC = storyBoard.instantiateViewController(withIdentifier: "SignInNavigationScene") as? SignInNavigationVC else { return }
-        present(signInNavigationVC, animated: true, completion: nil)
+//        guard let signInNavigationVC = storyBoard.instantiateViewController(withIdentifier: "SignInNavigationScene") as? SignInNavigationVC else { return }
+//        self.present(signInNavigationVC, animated: true, completion: nil)
+        
+        guard let signInVC = storyBoard.instantiateViewController(withIdentifier: "SignInScene") as? SignInVC else {return}
+        self.present(signInVC,animated: true,completion: nil)
     }
     
 

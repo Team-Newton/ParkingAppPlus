@@ -10,21 +10,52 @@ import UIKit
 
 class SignupVC: UIViewController {
 
+    @IBOutlet var txtName: UITextField!
+    @IBOutlet var txtEmail: UITextField!
+    @IBOutlet var txtPassword: UITextField!
+    @IBOutlet var txtPhoneNum: UITextField!
+    @IBOutlet var txtCarPlateNum: UITextField!
+    
+    @IBOutlet var btn_signup: UIButton!
+    
     override func viewDidLoad() {
+        view.addVerticalGradientLayer(leftColor: UIColor(hexString: "#FFFEFF")!, rightColor: UIColor(hexString: "#D7FFFE")!)
+        //btn_signup.layer.cornerRadius = 2.0
         super.viewDidLoad()
+        self.setupBarButton()
+        
+        setupElement()
 
-        // Do any additional setup after loading the view.
+    }
+    func setupElement(){
+        Utilities.styleTextField(txtName)
+        Utilities.styleTextField(txtEmail)
+        Utilities.styleTextField(txtPassword)
+        Utilities.styleTextField(txtPhoneNum)
+        Utilities.styleTextField(txtCarPlateNum)
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setupBarButton(){
+        let backButton = UIButton(type: .custom)
+        backButton.setImage(UIImage(named: "back.png"), for: .normal)
+        backButton.setTitle("  Back", for: .normal)
+        backButton.setTitleColor(backButton.tintColor, for: .normal)
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backButton)
+        backButton.addTarget(self, action: #selector(self.backButtonPressed), for: .touchUpInside)
     }
-    */
+    @objc func backButtonPressed() {
+            dismiss(animated: true, completion: nil)
+           
+        }
+    
+    }
 
-}
+
+
+
+
+
+
+
+
