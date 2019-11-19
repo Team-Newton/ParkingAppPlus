@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>724130702799-g178m6nrghk4g66r1phcvd28c75mgcg9.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.724130702799-g178m6nrghk4g66r1phcvd28c75mgcg9</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCyHvRIeuk-BTRDCKQaPvq1uKomqkzT7Hg</string>
+	<key>GCM_SENDER_ID</key>
+	<string>724130702799</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>SheridanCollege991422450.ParkingApplication</string>
+	<key>PROJECT_ID</key>
+	<string>parkingapplication-130d2</string>
+	<key>STORAGE_BUCKET</key>
+	<string>parkingapplication-130d2.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:724130702799:ios:faa42ec9fbb5de51a1deba</string>
+	<key>DATABASE_URL</key>
+	<string>https://parkingapplication-130d2.firebaseio.com</string>
+</dict>
+</plist>

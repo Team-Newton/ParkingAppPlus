@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="z4c-2a-nxM">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,7 +10,7 @@
         <!--LoginVC-->
         <scene sceneID="iM8-5z-mES">
             <objects>
-                <viewController storyboardIdentifier="LoginScene" id="z4c-2a-nxM" customClass="LoginVC" customModule="ParkingApplication" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginScene" useStoryboardIdentifierAsRestorationIdentifier="YES" id="z4c-2a-nxM" customClass="LoginVC" customModule="ParkingApplication" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vj6-vM-AV5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -38,6 +38,11 @@
                                         <state key="normal" title="Login">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="onSignInClick:" destination="z4c-2a-nxM" eventType="touchUpInside" id="xhu-hd-Ac9"/>
                                         </connections>
@@ -52,6 +57,11 @@
                                         <state key="normal" title="Create a New Account">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="onSignUpClick:" destination="z4c-2a-nxM" eventType="touchUpInside" id="7O7-iS-gNq"/>
                                         </connections>
@@ -90,7 +100,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jLi-bR-bAT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="759" y="-733"/>
+            <point key="canvasLocation" x="1078" y="-793"/>
         </scene>
         <!--Create New Account-->
         <scene sceneID="NcE-IQ-4Sc">
@@ -100,67 +110,85 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your Name" textAlignment="natural" minimumFontSize="17" background="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="jG2-9o-VSd">
-                                <rect key="frame" x="20" y="108" width="374" height="34"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jG2-9o-VSd">
+                                <rect key="frame" x="20" y="138" width="374" height="34"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="alphabet" textContentType="name"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vhs-RS-bMc">
-                                <rect key="frame" x="20" y="162" width="374" height="34"/>
+                                <rect key="frame" x="20" y="212" width="374" height="34"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dyS-lj-b9s">
-                                <rect key="frame" x="20" y="216" width="374" height="34"/>
+                                <rect key="frame" x="20" y="286" width="374" height="34"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iqI-sF-zqs">
-                                <rect key="frame" x="20" y="270" width="374" height="34"/>
+                                <rect key="frame" x="20" y="360" width="374" height="34"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad" textContentType="tel"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your Car Plate Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mjp-k2-rpv">
-                                <rect key="frame" x="20" y="324" width="374" height="34"/>
+                                <rect key="frame" x="20" y="434" width="374" height="34"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="namePhonePad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahP-yz-sTh">
-                                <rect key="frame" x="20" y="800" width="374" height="42"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <rect key="frame" x="40" y="528" width="334" height="42"/>
+                                <color key="backgroundColor" red="0.4055666266698153" green="0.66666668653488159" blue="0.63454209557428787" alpha="0.76054152397260277" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Create a New Account">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="5aW-ed-cDs" kind="show" id="mgo-JG-su8"/>
+                                    <action selector="onSignupClick:" destination="bfQ-l4-pJf" eventType="touchUpInside" id="4Du-EM-tKE"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="vhs-RS-bMc" firstAttribute="trailing" secondItem="jG2-9o-VSd" secondAttribute="trailing" id="5k7-sP-S0L"/>
-                            <constraint firstItem="mjp-k2-rpv" firstAttribute="top" secondItem="iqI-sF-zqs" secondAttribute="bottom" constant="20" id="D13-mc-ASW"/>
+                            <constraint firstItem="ahP-yz-sTh" firstAttribute="top" secondItem="mjp-k2-rpv" secondAttribute="bottom" constant="60" id="6am-Hb-7Cw"/>
+                            <constraint firstItem="jR4-F1-Xwy" firstAttribute="trailing" secondItem="ahP-yz-sTh" secondAttribute="trailing" constant="40" id="8wM-Qa-rRT"/>
+                            <constraint firstItem="mjp-k2-rpv" firstAttribute="top" secondItem="iqI-sF-zqs" secondAttribute="bottom" constant="40" id="D13-mc-ASW"/>
                             <constraint firstItem="vhs-RS-bMc" firstAttribute="leading" secondItem="jG2-9o-VSd" secondAttribute="leading" id="Dkd-NU-3Wc"/>
                             <constraint firstItem="mjp-k2-rpv" firstAttribute="trailing" secondItem="iqI-sF-zqs" secondAttribute="trailing" id="Fe6-9j-VwV"/>
-                            <constraint firstItem="vhs-RS-bMc" firstAttribute="top" secondItem="jG2-9o-VSd" secondAttribute="bottom" constant="20" id="Grj-6H-wwJ"/>
+                            <constraint firstItem="vhs-RS-bMc" firstAttribute="top" secondItem="jG2-9o-VSd" secondAttribute="bottom" constant="40" id="Grj-6H-wwJ"/>
                             <constraint firstItem="dyS-lj-b9s" firstAttribute="trailing" secondItem="vhs-RS-bMc" secondAttribute="trailing" id="HZA-eO-6wE"/>
                             <constraint firstItem="jR4-F1-Xwy" firstAttribute="trailing" secondItem="jG2-9o-VSd" secondAttribute="trailing" constant="20" id="I7Z-bv-e8e"/>
-                            <constraint firstItem="jG2-9o-VSd" firstAttribute="top" secondItem="jR4-F1-Xwy" secondAttribute="top" constant="20" id="JRB-SY-fkh"/>
+                            <constraint firstItem="jG2-9o-VSd" firstAttribute="top" secondItem="jR4-F1-Xwy" secondAttribute="top" constant="50" id="JRB-SY-fkh"/>
                             <constraint firstItem="jG2-9o-VSd" firstAttribute="leading" secondItem="jR4-F1-Xwy" secondAttribute="leading" constant="20" id="Sed-OW-g2U"/>
                             <constraint firstItem="iqI-sF-zqs" firstAttribute="leading" secondItem="dyS-lj-b9s" secondAttribute="leading" id="YrJ-lz-2V8"/>
                             <constraint firstItem="dyS-lj-b9s" firstAttribute="leading" secondItem="vhs-RS-bMc" secondAttribute="leading" id="bne-DG-pn5"/>
-                            <constraint firstItem="dyS-lj-b9s" firstAttribute="top" secondItem="vhs-RS-bMc" secondAttribute="bottom" constant="20" id="eOM-hH-GVa"/>
-                            <constraint firstItem="jR4-F1-Xwy" firstAttribute="trailing" secondItem="ahP-yz-sTh" secondAttribute="trailing" constant="20" id="eaQ-iQ-30f"/>
+                            <constraint firstItem="dyS-lj-b9s" firstAttribute="top" secondItem="vhs-RS-bMc" secondAttribute="bottom" constant="40" id="eOM-hH-GVa"/>
                             <constraint firstItem="iqI-sF-zqs" firstAttribute="trailing" secondItem="dyS-lj-b9s" secondAttribute="trailing" id="fyS-Pi-miU"/>
                             <constraint firstItem="mjp-k2-rpv" firstAttribute="leading" secondItem="iqI-sF-zqs" secondAttribute="leading" id="jmK-Ra-NpB"/>
-                            <constraint firstItem="jR4-F1-Xwy" firstAttribute="bottom" secondItem="ahP-yz-sTh" secondAttribute="bottom" constant="20" id="sOJ-nd-Uko"/>
-                            <constraint firstItem="iqI-sF-zqs" firstAttribute="top" secondItem="dyS-lj-b9s" secondAttribute="bottom" constant="20" id="y9x-64-nRk"/>
-                            <constraint firstItem="ahP-yz-sTh" firstAttribute="leading" secondItem="jR4-F1-Xwy" secondAttribute="leading" constant="20" id="z9v-cu-Ej4"/>
+                            <constraint firstItem="ahP-yz-sTh" firstAttribute="leading" secondItem="jR4-F1-Xwy" secondAttribute="leading" constant="40" id="ryH-TV-E6f"/>
+                            <constraint firstItem="iqI-sF-zqs" firstAttribute="top" secondItem="dyS-lj-b9s" secondAttribute="bottom" constant="40" id="y9x-64-nRk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jR4-F1-Xwy"/>
                     </view>
                     <navigationItem key="navigationItem" title="Create New Account" id="Uil-SC-abm"/>
+                    <connections>
+                        <outlet property="btn_signup" destination="ahP-yz-sTh" id="AZJ-0h-fGj"/>
+                        <outlet property="txtCarPlateNum" destination="mjp-k2-rpv" id="mlY-VR-Fn4"/>
+                        <outlet property="txtEmail" destination="vhs-RS-bMc" id="58p-Yb-YdO"/>
+                        <outlet property="txtName" destination="jG2-9o-VSd" id="c7n-CF-O0a"/>
+                        <outlet property="txtPassword" destination="dyS-lj-b9s" id="jKs-6t-pxV"/>
+                        <outlet property="txtPhoneNum" destination="iqI-sF-zqs" id="wSK-eo-C99"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nhW-7o-m0P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -175,24 +203,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Credit Card Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Es-Fn-xjO">
-                                <rect key="frame" x="20" y="108" width="374" height="34"/>
+                                <rect key="frame" x="20" y="64" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="visa-mastercard-icon" translatesAutoresizingMaskIntoConstraints="NO" id="x3R-yE-vAx">
-                                <rect key="frame" x="20" y="147" width="50" height="50.000000000000057"/>
+                                <rect key="frame" x="20" y="103" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="qA7-q1-NuU"/>
                                     <constraint firstAttribute="width" constant="50" id="tMZ-Ap-fNA"/>
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full Name on Card" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fZF-mj-2eY">
-                                <rect key="frame" x="20" y="202" width="374" height="34"/>
+                                <rect key="frame" x="20" y="158" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hak-e2-rIP">
-                                <rect key="frame" x="20" y="256" width="374" height="60"/>
+                                <rect key="frame" x="20" y="212" width="374" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="P8S-sX-jcO"/>
                                 </constraints>
@@ -223,23 +251,23 @@
         <!--Sign In-->
         <scene sceneID="6Gx-3A-vJQ">
             <objects>
-                <viewController storyboardIdentifier="SignInScene" id="lWT-ye-uuh" customClass="SignInVC" customModule="ParkingApplication" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignInScene" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="lWT-ye-uuh" customClass="SignInVC" customModule="ParkingApplication" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Om1-a6-1Th">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hcq-LF-sdP">
-                                <rect key="frame" x="20" y="108" width="374" height="34"/>
+                                <rect key="frame" x="20" y="64" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YMf-Q5-9k6">
-                                <rect key="frame" x="20" y="162" width="374" height="34"/>
+                                <rect key="frame" x="20" y="118" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DQe-p7-W7V">
-                                <rect key="frame" x="20" y="216" width="374" height="42"/>
+                                <rect key="frame" x="20" y="172" width="374" height="42"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Sign In">
@@ -248,21 +276,21 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0OC-g9-7hR">
-                                <rect key="frame" x="20" y="278" width="374" height="36"/>
+                                <rect key="frame" x="20" y="234" width="374" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Do not have account? Sign Up"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remember my Credientials" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ar9-Hv-WAj">
-                                <rect key="frame" x="20" y="334" width="305" height="31"/>
+                                <rect key="frame" x="20" y="290" width="305" height="31"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0u4-VN-laU">
-                                <rect key="frame" x="345" y="334" width="51" height="31"/>
+                                <rect key="frame" x="345" y="290" width="51" height="31"/>
                             </switch>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Va9-HF-bf0">
-                                <rect key="frame" x="20" y="385" width="374" height="36"/>
+                                <rect key="frame" x="20" y="341" width="374" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Forgot Password?">
                                     <color key="titleColor" red="0.15235849000856433" green="0.35881774627869806" blue="0.74198921319796951" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -299,7 +327,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fOO-Xz-YlD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3068" y="-488"/>
+            <point key="canvasLocation" x="3068" y="-461"/>
         </scene>
         <!--First-->
         <scene sceneID="hNz-n2-bh7">
@@ -392,7 +420,7 @@
         <!--Sign Up NavigationVC-->
         <scene sceneID="cfR-it-eQ7">
             <objects>
-                <navigationController storyboardIdentifier="SignUpNavigationScene" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="Cue-Te-9Lv" customClass="SignUpNavigationVC" customModule="ParkingApplication" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="SignUpNavigationScene" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Cue-Te-9Lv" customClass="SignUpNavigationVC" customModule="ParkingApplication" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="c3J-AA-0al">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -407,29 +435,10 @@
             </objects>
             <point key="canvasLocation" x="1894" y="-1167"/>
         </scene>
-        <!--Sign In NavigationVC-->
-        <scene sceneID="tfD-Cy-BEc">
-            <objects>
-                <navigationController storyboardIdentifier="SignInNavigationScene" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="WxD-Ze-qUX" customClass="SignInNavigationVC" customModule="ParkingApplication" customModuleProvider="target" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hb0-wa-GMN">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="lWT-ye-uuh" kind="relationship" relationship="rootViewController" id="yde-qe-Ajt"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mHm-tA-dof" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1893" y="-488"/>
-        </scene>
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
         <image name="mattia-righetti-gbBWpX2sXmU-unsplash" width="4912" height="7360"/>
-        <image name="person" catalog="system" width="64" height="58"/>
         <image name="second" width="30" height="30"/>
         <image name="visa-mastercard-icon" width="620" height="249"/>
     </resources>
