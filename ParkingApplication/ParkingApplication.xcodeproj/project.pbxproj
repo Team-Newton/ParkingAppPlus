@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2AAE319A2384851D00DDC236 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAE31992384851D00DDC236 /* test.swift */; };
 		3B5949EC237E230600EBC78B /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5949EB237E230600EBC78B /* SignupVC.swift */; };
 		3B5949EE237E239B00EBC78B /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5949ED237E239B00EBC78B /* LoginVC.swift */; };
 		3B5949F0237E2D8300EBC78B /* SignUpNavigationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5949EF237E2D8300EBC78B /* SignUpNavigationVC.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2AAE31992384851D00DDC236 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		3B5949EB237E230600EBC78B /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		3B5949ED237E239B00EBC78B /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		3B5949EF237E2D8300EBC78B /* SignUpNavigationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpNavigationVC.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 		3B75B40A237CA7C60053DCD2 = {
 			isa = PBXGroup;
 			children = (
+				2AAE31992384851D00DDC236 /* test.swift */,
 				3B5949FA2382848200EBC78B /* GoogleService-Info.plist */,
 				3B5949FC2382883F00EBC78B /* Podfile */,
 				3B75B415237CA7C60053DCD2 /* ParkingApplication */,
@@ -268,6 +271,7 @@
 				3B5949EC237E230600EBC78B /* SignupVC.swift in Sources */,
 				3B5949F62382234100EBC78B /* HelperExtensions.swift in Sources */,
 				3B75B41D237CA7C60053DCD2 /* SecondViewController.swift in Sources */,
+				2AAE319A2384851D00DDC236 /* test.swift in Sources */,
 				3B5949EE237E239B00EBC78B /* LoginVC.swift in Sources */,
 				3B5949F2237E378100EBC78B /* SignInNavigationVC.swift in Sources */,
 				3B5949F4237E37C800EBC78B /* SignInVC.swift in Sources */,
