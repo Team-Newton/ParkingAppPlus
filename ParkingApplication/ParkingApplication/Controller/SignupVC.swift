@@ -76,8 +76,7 @@ class SignupVC: UIViewController {
                         }
                         
                     }
-                    
-                    
+                
                     
                 }
             }
