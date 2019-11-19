@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -36,7 +36,7 @@
 		3B5949F52382234100EBC78B /* HelperExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperExtensions.swift; sourceTree = "<group>"; };
 		3B5949F823827BDA00EBC78B /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		3B5949FA2382848200EBC78B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		3B5949FC2382883F00EBC78B /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		3B5949FC2382883F00EBC78B /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		3B75B413237CA7C60053DCD2 /* ParkingApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParkingApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B75B416237CA7C60053DCD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B75B418237CA7C60053DCD2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +73,21 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		3B5A68C923846F500048718E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3B5949EB237E230600EBC78B /* SignupVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3B5A68CA23846F800048718E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		3B75B40A237CA7C60053DCD2 = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +111,8 @@
 		3B75B415237CA7C60053DCD2 /* ParkingApplication */ = {
 			isa = PBXGroup;
 			children = (
+				3B5A68CA23846F800048718E /* Model */,
+				3B5A68C923846F500048718E /* Controller */,
 				3B5949F72382792F00EBC78B /* Helpers */,
 				3B75B416237CA7C60053DCD2 /* AppDelegate.swift */,
 				3B75B418237CA7C60053DCD2 /* SceneDelegate.swift */,
@@ -106,7 +123,6 @@
 				3B75B426237CA7C80053DCD2 /* LaunchScreen.storyboard */,
 				3B75B429237CA7C80053DCD2 /* Info.plist */,
 				3B75B421237CA7C60053DCD2 /* ParkingApplication.xcdatamodeld */,
-				3B5949EB237E230600EBC78B /* SignupVC.swift */,
 				3B5949ED237E239B00EBC78B /* LoginVC.swift */,
 				3B5949EF237E2D8300EBC78B /* SignUpNavigationVC.swift */,
 				3B5949F1237E378100EBC78B /* SignInNavigationVC.swift */,
@@ -121,7 +137,6 @@
 				C4096EC72BB534361EE2445D /* Pods-ParkingApplication.debug.xcconfig */,
 				70B051323282200EC0EBBB27 /* Pods-ParkingApplication.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};

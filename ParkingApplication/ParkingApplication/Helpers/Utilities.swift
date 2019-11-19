@@ -20,4 +20,26 @@ class Utilities{
         
     }
     
+    static func isPasswordValid(_ password:String)->Bool{
+         let passwordTest = NSPredicate(format: "SELF MATCHES %@", "(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z]).{8,}")
+           return passwordTest.evaluate(with: password)
+    }
+    
+    
+    static func isEmailValid(_ email:String)->Bool{
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        let result = emailTest.evaluate(with: email)
+        return result
+    }
+    
+    static func isPhoneValid(_ phone: String) -> Bool {
+        let phoneRegex = "(\\([0-9]{3}\\) |[0-9]{3})[0-9]{3}[0-9]{4}"
+        let phoneTest = NSPredicate(format: "SELF MATCHES %@", phoneRegex)
+        let result =  phoneTest.evaluate(with: phone)
+        return result
+    }
+    
+    
+   
 }

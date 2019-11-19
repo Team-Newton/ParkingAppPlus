@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="z4c-2a-nxM">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -105,13 +105,12 @@
         <!--Create New Account-->
         <scene sceneID="NcE-IQ-4Sc">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nhW-7o-m0P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="SignUpScene" id="bfQ-l4-pJf" customClass="SignupVC" customModule="ParkingApplication" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="n8D-fV-nAc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jG2-9o-VSd">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jG2-9o-VSd">
                                 <rect key="frame" x="20" y="138" width="374" height="34"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -154,7 +153,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="5aW-ed-cDs" kind="show" id="mgo-JG-su8"/>
+                                    <action selector="onSignupClick:" destination="bfQ-l4-pJf" eventType="touchUpInside" id="4Du-EM-tKE"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -191,37 +190,37 @@
                         <outlet property="txtPhoneNum" destination="iqI-sF-zqs" id="wSK-eo-C99"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nhW-7o-m0P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3068.115942028986" y="-1167.1875"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="A7y-tJ-0UP">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4TK-QY-9ts" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="5aW-ed-cDs" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="z8L-P0-Gsk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Credit Card Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Es-Fn-xjO">
-                                <rect key="frame" x="20" y="108" width="374" height="34"/>
+                                <rect key="frame" x="20" y="64" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="visa-mastercard-icon" translatesAutoresizingMaskIntoConstraints="NO" id="x3R-yE-vAx">
-                                <rect key="frame" x="20" y="147" width="50" height="50"/>
+                                <rect key="frame" x="20" y="103" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="qA7-q1-NuU"/>
                                     <constraint firstAttribute="width" constant="50" id="tMZ-Ap-fNA"/>
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full Name on Card" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fZF-mj-2eY">
-                                <rect key="frame" x="20" y="202" width="374" height="34"/>
+                                <rect key="frame" x="20" y="158" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hak-e2-rIP">
-                                <rect key="frame" x="20" y="256" width="374" height="60"/>
+                                <rect key="frame" x="20" y="212" width="374" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="P8S-sX-jcO"/>
                                 </constraints>
@@ -245,6 +244,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="C1l-wT-lTk"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4TK-QY-9ts" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4123.188405797102" y="-1180.5803571428571"/>
         </scene>
@@ -420,7 +420,6 @@
         <!--Sign Up NavigationVC-->
         <scene sceneID="cfR-it-eQ7">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3VN-mv-eom" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController storyboardIdentifier="SignUpNavigationScene" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Cue-Te-9Lv" customClass="SignUpNavigationVC" customModule="ParkingApplication" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="c3J-AA-0al">
@@ -432,6 +431,7 @@
                         <segue destination="bfQ-l4-pJf" kind="relationship" relationship="rootViewController" id="H3L-xZ-ryo"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3VN-mv-eom" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1894" y="-1167"/>
         </scene>
