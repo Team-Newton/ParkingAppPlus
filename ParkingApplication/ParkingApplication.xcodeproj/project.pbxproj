@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2AAE319F23848C1900DDC236 /* addParkingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAE319E23848C1900DDC236 /* addParkingVC.swift */; };
+		2AAE31A12384B1C300DDC236 /* ReceiptVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAE31A02384B1C300DDC236 /* ReceiptVC.swift */; };
 		3B5949EC237E230600EBC78B /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5949EB237E230600EBC78B /* SignupVC.swift */; };
 		3B5949EE237E239B00EBC78B /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5949ED237E239B00EBC78B /* LoginVC.swift */; };
 		3B5949F0237E2D8300EBC78B /* SignUpNavigationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5949EF237E2D8300EBC78B /* SignUpNavigationVC.swift */; };
@@ -28,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2AAE319E23848C1900DDC236 /* addParkingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addParkingVC.swift; sourceTree = "<group>"; };
+		2AAE31A02384B1C300DDC236 /* ReceiptVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptVC.swift; sourceTree = "<group>"; };
 		3B5949EB237E230600EBC78B /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		3B5949ED237E239B00EBC78B /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		3B5949EF237E2D8300EBC78B /* SignUpNavigationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpNavigationVC.swift; sourceTree = "<group>"; };
@@ -64,6 +68,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2AAE319D23848B5E00DDC236 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2AAE319E23848C1900DDC236 /* addParkingVC.swift */,
+				2AAE31A02384B1C300DDC236 /* ReceiptVC.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		3B5949F72382792F00EBC78B /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +124,7 @@
 		3B75B415237CA7C60053DCD2 /* ParkingApplication */ = {
 			isa = PBXGroup;
 			children = (
+				2AAE319D23848B5E00DDC236 /* View */,
 				3B5A68CA23846F800048718E /* Model */,
 				3B5A68C923846F500048718E /* Controller */,
 				3B5949F72382792F00EBC78B /* Helpers */,
@@ -265,12 +279,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AAE319F23848C1900DDC236 /* addParkingVC.swift in Sources */,
 				3B5949EC237E230600EBC78B /* SignupVC.swift in Sources */,
 				3B5949F62382234100EBC78B /* HelperExtensions.swift in Sources */,
 				3B75B41D237CA7C60053DCD2 /* SecondViewController.swift in Sources */,
 				3B5949EE237E239B00EBC78B /* LoginVC.swift in Sources */,
 				3B5949F2237E378100EBC78B /* SignInNavigationVC.swift in Sources */,
 				3B5949F4237E37C800EBC78B /* SignInVC.swift in Sources */,
+				2AAE31A12384B1C300DDC236 /* ReceiptVC.swift in Sources */,
 				3B5949F923827BDA00EBC78B /* Utilities.swift in Sources */,
 				3B75B41B237CA7C60053DCD2 /* FirstViewController.swift in Sources */,
 				3B75B417237CA7C60053DCD2 /* AppDelegate.swift in Sources */,
